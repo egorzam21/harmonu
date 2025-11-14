@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этапы проекта | BrowHarmony</title>
+    
+    <!-- Подключение аналитики -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105204073', 'ym');
+    
+        ym(105204073, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105204073" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKVHBT7EJX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MKVHBT7EJX');
+    </script>
+    
+    <!-- Hotjar -->
+    <script>
+        (function (c, s, q, u, a, r, e) {
+            c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
+            c._hjSettings = { hjid: a };
+            r = s.getElementsByTagName('head')[0];
+            e = s.createElement('script');
+            e.async = true;
+            e.src = q + c._hjSettings.hjid + u;
+            r.appendChild(e);
+        })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6570731);
+    </script>
+    
+    <!-- Подключение внешних ресурсов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Проверка авторизации -->
+    <script>
+        // Проверяем авторизацию сразу при загрузке страницы
+        const user = localStorage.getItem('currentUser');
+        const currentPage = window.location.pathname.split('/').pop();
+        const protectedPages = ['project.html', 'documents.html'];
+        
+        if (protectedPages.includes(currentPage) && !user) {
+            alert('Для доступа к этой странице необходимо авторизоваться');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-eye-brow"></i>
+                    BrowHarmony
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="project.html" class="nav-link active">Проект</a></li>
+                        <li><a href="documents.html" class="nav-link">Документы</a></li>
+                        <li><a href="index.html#services">Услуги</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-section">
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <span id="userName"></span>
+                        <button class="logout-btn" id="logoutBtn">Выйти</button>
+                    </div>
+                    <button class="auth-btn" id="loginBtn">Войти</button>
+                    <button class="auth-btn" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Protected Navigation -->
+    <div class="protected-nav" id="protectedNav">
+        <div class="container">
+            <ul>
+                <li><a href="project.html" class="protected-nav-link active">Этапы проекта</a></li>
+                <li><a href="documents.html" class="protected-nav-link">Документация</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <section class="protected-content">
+        <div class="container">
+            <h1 class="page-title">Этапы реализации проекта</h1>
+            
+            <div class="project-tabs">
+                <div class="project-tab active" data-tab="planning">Планирование</div>
+                <div class="project-tab" data-tab="development">Разработка</div>
+                <div class="project-tab" data-tab="testing">Тестирование</div>
+                <div class="project-tab" data-tab="implementation">Внедрение</div>
+            </div>
+            
+            <div class="project-content active" id="planningContent">
+                <div class="info-section">
+                    <h2>Тема</h2>
+                    <p>Успешный бьюти-бизнес: от концепции до реализации услуг бровиста</p>
+                    
+                    <h2>Цель</h2>
+                    <p>Создание устойчивого бизнеса по предоставлению услуг бровиста</p>
+                    
+                    <h2>Задачи</h2>
+                    <ul>
+                        <li>Разработать маркетинговую стратегию для продвижения услуг</li>
+                        <li>Обеспечить комфортные условия для клиентов (интерьер, сервис)</li>
+                        <li>Наладить систему онлайн-записи и продвижения через соцсети</li>
+                        <li>Создать систему лояльности для постоянных клиентов</li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Целевая аудитория (возраст клиентов)</h3>
+                    <canvas id="ageChart"></canvas>
+                </div>
+                
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <h3 class="analysis-title">SWOT-анализ</h3>
+                        
+                        <div class="analysis-item">
+                            <strong>Сильные стороны (Strengths):</strong>
+                            <ul>
+                                <li>Высокое качество услуг</li>
+                                <li>Индивидуальный подход к каждому клиенту</li>
+                                <li>Современные техники и сертификация</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Слабые стороны (Weaknesses):</strong>
+                            <ul>
+                                <li>Новичок на рынке, низкая узнаваемость</li>
+                                <li>Ограниченный бюджет на рекламу</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Возможности (Opportunities):</strong>
+                            <ul>
+                                <li>Рост спроса на услуги красоты</li>
+                                <li>Популяризация ухода за внешностью в соцсетях</li>
+                                <li>Расширение спектра услуг (ресницы, макияж)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Угрозы (Threats):</strong>
+                            <ul>
+                                <li>Конкуренция с крупными салонами</li>
+                                <li>Изменения в модных тенденциях</li>
+                                <li>Экономическая нестабильность</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h3 class="analysis-title">4P-анализ</h3>
+                        
+                        <div class="analysis-item">
+                            <strong>Product (Продукт):</strong>
+                            <ul>
+                                <li>Основные услуги: коррекция формы бровей, окрашивание краской/хной, ламинирование, архитектура бровей</li>
+                                <li>Дополнительные услуги: консультации по подбору формы, уход за бровями</li>
+                                <li>Ценность: индивидуальный подход, использование качественных материалов, стерильность инструментов</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Price (Цена):</strong>
+                            <ul>
+                                <li>Средний сегмент (услуга коррекции – от 600 руб., окрашивание – от 800 руб., ламинирование – от 1200 руб.)</li>
+                                <li>Скидки для постоянных клиентов (карта лояльности, каждая 5-я процедура – со скидкой)</li>
+                                <li>Пакетные предложения (коррекция + окрашивание = выгоднее)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Place (Место):</strong>
+                            <ul>
+                                <li>Салон в удобном районе с хорошей транспортной доступностью</li>
+                                <li>Онлайн-запись через сайт и соцсети</li>
+                                <li>Возможность выезда на дом (дополнительная услуга)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <strong>Promotion (Продвижение):</strong>
+                            <ul>
+                                <li>Соцсети (Instagram, VK) – фото до/после, отзывы клиентов, полезный контент</li>
+                                <li>Сотрудничество с бьюти-блогерами для обзоров</li>
+                                <li>Акции для первых клиентов (скидка 20% на первую процедуру)</li>
+                                <li>Программа лояльности для постоянных клиентов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-content" id="developmentContent">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="step-title">Разработка</h3>
+                        <p>Адаптивная верстка, программирование функционала на WordPress, интеграция форм записи и платежной системы, подключение аналитики.</p>
+                        <ul>
+                            <li>Срок: 30 сентября - 15 ноября 2025</li>
+                            <li>Результат: Функционирующая тестовая версия</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-content" id="testingContent">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3 class="step-title">Тестирование</h3>
+                        <p>Комплексное тестирование системы: функциональное, кросс-браузерное, адаптивность, нагрузочное. Исправление выявленных ошибок.</p>
+                        <ul>
+                            <li>Срок: 18 ноября - 6 декабря 2025</li>
+                            <li>Результат: Протестированный веб-сайт</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-content" id="implementationContent">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="step-title">Внедрение</h3>
+                        <p>Перенос на боевой хостинг, настройка домена, SSL-сертификата, обучение заказчика, финальная настройка сервисов аналитики.</p>
+                        <ul>
+                            <li>Срок: 9-20 декабря 2025</li>
+                            <li>Результат: Рабочий сайт на домене заказчика</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Красивая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@browharmony.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 21:00</p>
+                    <p>Сб-Вс: 10:00 - 20:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div style="font-size: 24px;">
+                        <i class="fab fa-instagram" style="margin-right: 15px;"></i>
+                        <i class="fab fa-vk" style="margin-right: 15px;"></i>
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Салон красоты "BrowHarmony". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Вход</div>
+                <div class="auth-tab" id="registerTab">Регистрация</div>
+            </div>
+            
+            <form class="auth-form active" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="Введите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Имя</label>
+                    <input type="text" id="registerName" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль</label>
+                    <input type="password" id="registerPassword" placeholder="Придумайте пароль">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="confirmPassword" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
+    <script id="amoforms_script_1626934" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712699"></script>
+</body>
+</html>

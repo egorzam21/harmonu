@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация проекта | BrowHarmony</title>
+    
+    <!-- Подключение аналитики -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105204073', 'ym');
+    
+        ym(105204073, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105204073" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKVHBT7EJX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MKVHBT7EJX');
+    </script>
+    
+    <!-- Hotjar -->
+    <script>
+        (function (c, s, q, u, a, r, e) {
+            c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
+            c._hjSettings = { hjid: a };
+            r = s.getElementsByTagName('head')[0];
+            e = s.createElement('script');
+            e.async = true;
+            e.src = q + c._hjSettings.hjid + u;
+            r.appendChild(e);
+        })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6570731);
+    </script>
+    
+    <!-- Подключение внешних ресурсов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Проверка авторизации -->
+    <script>
+        // Проверяем авторизацию сразу при загрузке страницы
+        const user = localStorage.getItem('currentUser');
+        const currentPage = window.location.pathname.split('/').pop();
+        const protectedPages = ['project.html', 'documents.html'];
+        
+        if (protectedPages.includes(currentPage) && !user) {
+            alert('Для доступа к этой странице необходимо авторизоваться');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-eye-brow"></i>
+                    BrowHarmony
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="project.html" class="nav-link">Проект</a></li>
+                        <li><a href="documents.html" class="nav-link active">Документы</a></li>
+                        <li><a href="index.html#services">Услуги</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-section">
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <span id="userName"></span>
+                        <button class="logout-btn" id="logoutBtn">Выйти</button>
+                    </div>
+                    <button class="auth-btn" id="loginBtn">Войти</button>
+                    <button class="auth-btn" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Protected Navigation -->
+    <div class="protected-nav" id="protectedNav">
+        <div class="container">
+            <ul>
+                <li><a href="project.html" class="protected-nav-link">Этапы проекта</a></li>
+                <li><a href="documents.html" class="protected-nav-link active">Документация</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Documents Content -->
+    <section class="protected-content">
+        <div class="container">
+            <h1 class="page-title">Документация проекта</h1>
+            
+            <div class="documents-list">
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="document-title">Техническое задание</h3>
+                    <p>Полное ТЗ на разработку сайта с описанием функционала, требований и этапов работ</p>
+                    <a href="#" class="document-link download-link" data-file="тз Шмавонян.docx" data-filename="ТЗ-BrowHarmony-2025.docx">Скачать DOCX</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="document-title">Описание проекта</h3>
+                    <p>Бизнес-план и маркетинговая стратегия развития студии бровей</p>
+                    <a href="#" class="document-link download-link" data-file="Услуги Бровсита Шмавонян.docx" data-filename="Описание-проекта-BrowHarmony.docx">Скачать DOCX</a>
+                </div>
+                
+                <!-- Новые диаграммы для скачивания -->
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма классов</h3>
+                    <p>Структура классов системы онлайн-записи с атрибутами и методами</p>
+                    <a href="Диаграмма классов Шмавонян.png" class="document-link" download="Диаграмма-классов-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма компонентов</h3>
+                    <p>Архитектурные компоненты системы и их взаимодействие</p>
+                    <a href="Диаграмма Компонентов.png" class="document-link" download="Диаграмма-компонентов-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма развертывания</h3>
+                    <p>Инфраструктура развертывания системы и серверные компоненты</p>
+                    <a href="Диаграмма_Развертывания_Шмавонян.png" class="document-link" download="Диаграмма-развертывания-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма вариантов использования</h3>
+                    <p>Роли пользователей и их взаимодействие с системой</p>
+                    <a href="Диаграмма_Вариантов_Использования_Шмавонян.png" class="document-link" download="Диаграмма-вариантов-использования-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма последовательности</h3>
+                    <p>Последовательность действий при записи и оплате услуг</p>
+                    <a href="Диаграмма_Последовательности_Шмавонян.png" class="document-link" download="Диаграмма-последовательности-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма деятельностей</h3>
+                    <p>Бизнес-процессы и workflow системы онлайн-записи</p>
+                    <a href="Диаграмма_Деятельностей_Шмавонян.png" class="document-link" download="Диаграмма-деятельностей-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-object-group"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма объектов</h3>
+                    <p>Экземпляры объектов системы с конкретными значениями</p>
+                    <a href="Диаграмма Объектов Шмавонян.png" class="document-link" download="Диаграмма-объектов-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма композитной структуры</h3>
+                    <p>Составные структуры и связи между компонентами системы</p>
+                    <a href="Диаграмма_Композитной_Структуры_Шмавонян.png" class="document-link" download="Диаграмма-композитной-структуры-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма коммуникаций</h3>
+                    <p>Взаимодействие между участниками системы и обмен сообщениями</p>
+                    <a href="Диаграмма_Коммуникаций_Шмавонян.png" class="document-link" download="Диаграмма-коммуникаций-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма пакетов</h3>
+                    <p>Группировка элементов системы по функциональным пакетам</p>
+                    <a href="Диаграмма Пакетов Шмавонян.png" class="document-link" download="Диаграмма-пакетов-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="document-title">Временная диаграмма</h3>
+                    <p>Временные аспекты процессов и взаимодействий в системе</p>
+                    <a href="Временная диаграмма Шмавонян.png" class="document-link" download="Временная-диаграмма-BrowHarmony.png">Скачать PNG</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <h3 class="document-title">Диаграмма состояний</h3>
+                    <p>Жизненный цикл состояний системы и переходы между ними</p>
+                    <a href="Диаграмма Состояний Шмавонян.png" class="document-link" download="Диаграмма-состояний-BrowHarmony.png">Скачать PNG</a>
+                </div>
+            </div>
+
+            <!-- Блок с описанием диаграмм -->
+            <div class="info-section" style="margin-top: 50px;">
+                <h2>О диаграммах проекта</h2>
+                <p>Данный набор UML-диаграмм представляет полную визуальную документацию системы онлайн-записи салона красоты "BrowHarmony". Диаграммы охватывают все аспекты проектирования:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+                    <div>
+                        <h4 style="color: #ff69b4; margin-bottom: 10px;">Структурные диаграммы:</h4>
+                        <ul>
+                            <li><strong>Диаграмма классов</strong> - архитектура системы</li>
+                            <li><strong>Диаграмма компонентов</strong> - модульная структура</li>
+                            <li><strong>Диаграмма развертывания</strong> - инфраструктура</li>
+                            <li><strong>Диаграмма объектов</strong> - экземпляры данных</li>
+                            <li><strong>Диаграмма композитной структуры</strong> - внутреннее строение</li>
+                            <li><strong>Диаграмма пакетов</strong> - группировка элементов</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ff69b4; margin-bottom: 10px;">Поведенческие диаграммы:</h4>
+                        <ul>
+                            <li><strong>Диаграмма вариантов использования</strong> - функциональность</li>
+                            <li><strong>Диаграмма последовательности</strong> - временные взаимодействия</li>
+                            <li><strong>Диаграмма деятельностей</strong> - бизнес-процессы</li>
+                            <li><strong>Диаграмма состояний</strong> - жизненные циклы</li>
+                            <li><strong>Диаграмма коммуникаций</strong> - взаимодействия</li>
+                            <li><strong>Временная диаграмма</strong> - временные ограничения</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: #fff; padding: 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #ff69b4;">
+                    <h4 style="color: #ff69b4; margin-bottom: 10px;">💡 Для разработчиков и аналитиков:</h4>
+                    <p>Этот комплект диаграмм служит основой для понимания бизнес-логики, проектирования базы данных и разработки функционала. Каждая диаграмма раскрывает определенный аспект системы, что позволяет комплексно подойти к реализации проекта.</p>
+                    <p style="margin-top: 10px;"><strong>Особенность проекта:</strong> Система онлайн-записи интегрирована с бизнес-процессами салона красоты, учитывает специфику работы бровиста и обеспечивает удобство как для клиентов, так и для администраторов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Красивая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@browharmony.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 21:00</p>
+                    <p>Сб-Вс: 10:00 - 20:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div style="font-size: 24px;">
+                        <i class="fab fa-instagram" style="margin-right: 15px;"></i>
+                        <i class="fab fa-vk" style="margin-right: 15px;"></i>
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Салон красоты "BrowHarmony". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Вход</div>
+                <div class="auth-tab" id="registerTab">Регистрация</div>
+            </div>
+            
+            <form class="auth-form active" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="Введите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Имя</label>
+                    <input type="text" id="registerName" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль</label>
+                    <input type="password" id="registerPassword" placeholder="Придумайте пароль">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="confirmPassword" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
+    <script id="amoforms_script_1626934" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712699"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrowHarmony | Профессиональные услуги бровиста</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5QPZHG5S');</script>
+    <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QPZHG5S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Подключение аналитики -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105204073', 'ym');
+    
+        ym(105204073, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105204073" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKVHBT7EJX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MKVHBT7EJX');
+    </script>
+    
+    <!-- Hotjar -->
+    <script>
+        (function (c, s, q, u, a, r, e) {
+            c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
+            c._hjSettings = { hjid: a };
+            r = s.getElementsByTagName('head')[0];
+            e = s.createElement('script');
+            e.async = true;
+            e.src = q + c._hjSettings.hjid + u;
+            r.appendChild(e);
+        })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6570731);
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u521kmk64h");
+    </script>
+    <!-- Подключение внешних ресурсов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для центрирования CRM формы */
+        .crm-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+        }
+        
+        .crm-form-wrapper {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .crm-form-title {
+            margin-bottom: 20px;
+            color: #ff69b4;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-eye-brow"></i>
+                    BrowHarmony
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link active">Главная</a></li>
+                        <li><a href="project.html" class="nav-link">Проект</a></li>
+                        <li><a href="documents.html" class="nav-link">Документы</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-section">
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <span id="userName"></span>
+                        <button class="logout-btn" id="logoutBtn">Выйти</button>
+                    </div>
+                    <button class="auth-btn" id="loginBtn">Войти</button>
+                    <button class="auth-btn" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Профессиональный уход за бровями</h1>
+            <p>Создаем идеальную форму и подчеркиваем вашу естественную красоту с помощью современных техник и качественных материалов</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="salon-showcase">
+                <div class="salon-image">
+                    <div class="salon-content">
+                        <h2>Салон BrowHarmony</h2>
+                        <p>Место, где рождается ваша идеальная красота. Уютная атмосфера, профессиональное оборудование и внимание к каждой детали</p>
+                        
+                        <div class="salon-features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-spa"></i>
+                                </div>
+                                <h3>Уютная атмосфера</h3>
+                                <p>Комфортная обстановка для полного расслабления</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Премиум качество</h3>
+                                <p>Только сертифицированные материалы и инструменты</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Индивидуальный подход</h3>
+                                <p>Персональные консультации для каждого клиента</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <!-- Центрированная CRM форма -->
+                        <!-- Центрированная CRM форма -->
+            <div class="crm-form-container">
+                <div class="crm-form-wrapper" style="background-color: #ffb6c1; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; max-width: 800px;">
+                    <h2 class="crm-form-title">Записаться на консультацию</h2>
+                    <!-- Обновленный код CRM формы -->
+                    <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1629026",hash:"242a5dce9d8a460230c55d06b136740c",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
+                    <script id="amoforms_script_1629026" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762976899"></script>
+                </div>
+            </div>
+            
+            <div class="info-section" id="services">
+                <h2>Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3 class="service-title">Коррекция бровей</h3>
+                        <p>Профессиональная коррекция формы с учетом особенностей лица</p>
+                        <div class="service-price">от 600 ₽</div>
+                        <button class="service-btn">Записаться</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="service-title">Окрашивание</h3>
+                        <p>Окрашивание краской или хной для выразительного взгляда</p>
+                        <div class="service-price">от 800 ₽</div>
+                        <button class="service-btn">Записаться</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="service-title">Ламинирование</h3>
+                        <p>Эффектная укладка и фиксация волосков на несколько недель</p>
+                        <div class="service-price">от 1200 ₽</div>
+                        <button class="service-btn">Записаться</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h2>О нашем салоне</h2>
+                <p>Салон красоты "BrowHarmony" специализируется на создании идеальной формы бровей с учетом индивидуальных особенностей каждого клиента. Мы предлагаем:</p>
+                <ul>
+                    <li>Коррекцию формы бровей</li>
+                    <li>Окрашивание краской и хной</li>
+                    <li>Ламинирование бровей</li>
+                    <li>Архитектуру бровей</li>
+                    <li>Консультации по подбору формы</li>
+                    <li>Рекомендации по уходу за бровями</li>
+                </ul>
+                <p>Наши мастера используют только качественные материалы и стерильные инструменты, обеспечивая безопасность и комфорт для каждого клиента.</p>
+                
+                <div style="margin-top: 30px; padding: 20px; background-color: white; border-radius: 10px;">
+                    <h3 style="color: #ff69b4; margin-bottom: 15px;">Шмавонян Диана</h3>
+                    <p>Основатель и ведущий специалист салона "BrowHarmony". Опыт работы более 5 лет. Сертифицированный мастер по коррекции и окрашиванию бровей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Красивая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@browharmony.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 21:00</p>
+                    <p>Сб-Вс: 10:00 - 20:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div style="font-size: 24px;">
+                        <i class="fab fa-instagram" style="margin-right: 15px;"></i>
+                        <i class="fab fa-vk" style="margin-right: 15px;"></i>
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Салон красоты "BrowHarmony". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Вход</div>
+                <div class="auth-tab" id="registerTab">Регистрация</div>
+            </div>
+            
+            <form class="auth-form active" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="Введите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Имя</label>
+                    <input type="text" id="registerName" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль</label>
+                    <input type="password" id="registerPassword" placeholder="Придумайте пароль">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="confirmPassword" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
+</body>
+</html>
